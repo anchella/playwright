@@ -9,10 +9,8 @@ test("Open google page", async ({ page }) => {
     "Selenium Practice - Student Registration Form"
   );
 
-  // await page.goto("https://www.google.com/");
-  await page.locator("css=#name").isVisible;
-  // const googleSearch = page.getByRole("textarea", { class: "gLFyf" });
-  // await googleSearch.click();
-  // await page.getByRole("")
-  await page.pause();
+  const registrationName = page.locator("css=#name");
+  expect(registrationName.isVisible).toBeTruthy;
+  await registrationName.fill("Rajinikanth");
+  await expect(registrationName).toHaveText("Rajinikanth");
 });
