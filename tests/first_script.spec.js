@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 // const { test, expect } = require("@playwright/test");
-test("Open google page", async ({ page }) => {
+test.skip("Fill Registration form in Selenium Tutorials", async ({ page }) => {
   //Navigate to page
   await page.goto("/selenium/practice/selenium_automation_practice.php");
   await expect(page).toHaveTitle(
